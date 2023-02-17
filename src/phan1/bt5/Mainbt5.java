@@ -13,6 +13,14 @@ public class Mainbt5 {
         String lop;
         String monDay;
         String toBoMon;
+        hoTen = scanner.nextLine();
+        tuoi = scanner.nextInt();
+        diaChi = scanner.nextLine();
+        sdt = scanner.nextLine();
+        monDay = scanner.nextLine();
+        toBoMon = scanner.nextLine();
+        GiaoVien giaoVienCN = new GiaoVien(hoTen, tuoi, diaChi, sdt, monDay, toBoMon);
+        lopHoc.setGiaoVienCN(giaoVienCN);
         for (int i = 0; i < 5; i++) {
             hoTen = scanner.nextLine();
             tuoi = scanner.nextInt();

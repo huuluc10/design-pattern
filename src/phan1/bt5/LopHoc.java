@@ -25,6 +25,15 @@ public class LopHoc{
            return 0;
        }
     }
+
+    public GiaoVien getGiaoVienCN() {
+        return giaoVienCN;
+    }
+
+    public void setGiaoVienCN(GiaoVien giaoVienCN) {
+        this.giaoVienCN = giaoVienCN;
+    }
+
     public int inDSHS() {
         try {
             for (HocSinh i: hocSinh) {
