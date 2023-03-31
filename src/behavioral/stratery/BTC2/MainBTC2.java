@@ -1,6 +1,6 @@
 package behavioral.stratery.BTC2;
 
-public class Main {
+public class MainBTC2 {
     public static void main(String[] args) {
         QLSV qlsv = new QLSV();
         qlsv.addSinhVien(new SinhVien("Nguyễn Lê Tâm","12/03/2002", 9.1F));
