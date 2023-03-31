@@ -2,19 +2,13 @@ package behavioral.observer.BTA1;
 
 import java.util.List;
 
-public class Client implements Stream.I_client {
+public abstract class Client<T> implements Stream.I_client<T> {
 
-    Stream stream;
+    Stream<T> stream;
 
     public Client(Stream stream) {
         this.stream = stream;
         stream.listen(this);
     }
 
-    @Override
-    public void getInfo(List<MonHoc> monHocs) {
-        for (MonHoc monhoc: monHocs) {
-            System.out.println(monhoc.toString());
-        }
-    }
 }

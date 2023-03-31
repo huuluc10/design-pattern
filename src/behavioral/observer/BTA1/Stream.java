@@ -3,21 +3,21 @@ package behavioral.observer.BTA1;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Stream {
+public class Stream<T> {
     List<I_client> clients = new ArrayList<>();
 
-    void addEvent(List<MonHoc> monHocs) {
+    void addEvent(T t) {
         for (I_client client: clients) {
-            client.getInfo(monHocs);
+            client.getInfo(t);
         }
     }
 
-    void listen(Client listener) {
+    void listen(I_client listener) {
         clients.add(listener);
     }
 
 
-    public interface I_client {
-        void getInfo(List<MonHoc> monHocs);
+    public interface I_client<T> {
+        void getInfo(T t);
     }
 }

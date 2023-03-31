@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TruyCapDuLieu {
-    Stream stream;
+    Stream<List<MonHoc>> stream;
     List<MonHoc> monHocs = new ArrayList<>();
 
-    public TruyCapDuLieu(Stream stream) {
+    public TruyCapDuLieu(Stream<List<MonHoc>> stream) {
         this.stream = stream;
     }
 
