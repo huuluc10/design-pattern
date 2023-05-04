@@ -2,7 +2,19 @@ package behavioral.chain_of_responsibility.BTB3;
 
 public class DienSinhHoat implements ITinhTienDien{
 
-    ITinhTienDien succesor;
+    private ITinhTienDien succesor;
+    private double min;
+    private double max;
+    private double gia;
+
+    private double tongTien = 0;
+
+    public DienSinhHoat(double min, double max, double gia) {
+        this.min = min;
+        this.max = max;
+        this.gia = gia;
+    }
+
     @Override
     public void setSuccessor(ITinhTienDien succesor) {
         this.succesor = succesor;
@@ -14,10 +26,13 @@ public class DienSinhHoat implements ITinhTienDien{
     }
 
     @Override
-    public double TinhTienDien(int soKWh) {
-        if (soKWh > 50) {
-            //tongTien = (50 * 1.678) + succesor.TinhTienDien(soKWh);
+    public double TinhTienDien(double soKWh) {
+        if (soKWh > max) {
+            tongTien = (max - min) * gia + succesor.TinhTienDien(soKWh);
+            return tongTien;
         }
-        return 0;
+        tongTien = (soKWh - min) * gia;
+        return tongTien;
     }
+
 }
