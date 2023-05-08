@@ -20,25 +20,23 @@ public abstract class EntityDB<T> {
     protected abstract int getKey(T t);
 
     public int update(T t) {
-        int count = 0;
         for (int i = 0; i < list.size(); i++) {
             if (getKey(list.get(i)) == getKey(t)) {
                 list.set(i, t);
-                count ++;
+                return 1;
             }
         }
-        return count;
+        return 0;
     }
 
     public int delete(T t) {
-        int count = 0;
         for (int i = 0; i < list.size(); i++) {
             if (getKey(list.get(i)) == getKey(t)) {
                 list.remove(i);
-                count ++;
+                return  1;
             }
         }
-        return count;
+        return 0;
     }
 
     public T findById(int id) {
@@ -51,13 +49,12 @@ public abstract class EntityDB<T> {
     }
 
     public int delete(int id) {
-        int count = 0;
         for (var o : list) {
             if (getKey(o) == id) {
                 list.remove(o);
-                count ++;
+                return 1;
             }
         }
-        return count;
+        return 0;
     }
 }
