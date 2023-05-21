@@ -1,4 +1,4 @@
-package structural.composite;
+package structural.composite.FolderTree;
 
 public class MainFile {
     public static void main(String[] args) {

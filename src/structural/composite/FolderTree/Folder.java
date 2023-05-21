@@ -1,4 +1,4 @@
-package structural.composite;
+package structural.composite.FolderTree;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package structural.composite;
+package structural.composite.FolderTree;
 
 public abstract class AbstractFile {
     protected String name;

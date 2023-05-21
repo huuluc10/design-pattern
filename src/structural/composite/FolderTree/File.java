@@ -1,4 +1,4 @@
-package structural.composite;
+package structural.composite.FolderTree;
 
 public class File extends AbstractFile {
     @Override
